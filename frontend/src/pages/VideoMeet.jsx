@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from 'react'
 import io from "socket.io-client";
 import { Badge, IconButton, TextField } from '@mui/material';
@@ -430,8 +432,6 @@ export default function VideoMeetComponent() {
         console.log(socketRef.current);
         socketRef.current.emit('chat-message', message, username)
         setMessage("");
-
-        // this.setState({ message: "", sender: username })
     }
 
     
