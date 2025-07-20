@@ -1,8 +1,8 @@
 let IS_PROD = true;
 const server = IS_PROD ?
-    "https://ChatterHubbackend.onrender.com" :
+    "https://chatterhub-gyhi.onrender.com" :
 
-    "http://localhost:8000"
+    "http://localhost:3002"
 
 
 export default server;
