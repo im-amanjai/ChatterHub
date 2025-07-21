@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import withAuth from '../utils/withAuth.jsx';
 import { useNavigate } from 'react-router-dom'
-import "../App.css";
+import './Home.css';
 import { Button, IconButton, TextField } from '@mui/material';
 import RestoreIcon from '@mui/icons-material/Restore';
 import { AuthContext } from '../contexts/AuthContext';
