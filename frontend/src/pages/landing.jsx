@@ -41,7 +41,7 @@ export default function LandingPage() {
                 </div>
                 <div>
 
-                    <img src="/bg1.jpg" alt="" />
+                    <img src="/bg5.avif" alt="" />
 
                 </div>
             </div>

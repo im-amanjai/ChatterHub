@@ -1,19 +1,17 @@
+/* Base Styles */
 .landingPageContainer {
   width: 100vw;
   height: 100vh;
-  background: url("/public/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("/public/background.png") no-repeat center center/cover;
   color: white;
 }
 
 .landingPageContainer nav {
-  padding-inline: 1.2rem;
-  padding-block: 1.6rem;
+  padding: 1.2rem 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  width: 100%;
 }
 
 .landingPageContainer nav h2 {
@@ -25,22 +23,23 @@
   display: flex;
   gap: 1.6rem;
   cursor: pointer;
-
 }
 
+/* Landing Main Section */
 .landingMainContainer {
   display: flex;
   justify-content: space-between;
-  padding-inline: 3rem;
-  height: 80vh;
   align-items: center;
+  padding: 3rem;
+  height: 80vh;
 }
 
-.landingMainContainer>div:nth-child(1) {
+.landingMainContainer > div:nth-child(1) {
   font-size: 2.2rem;
+  max-width: 50%;
 }
 
-.landingMainContainer>div:nth-child(1) div[role='button'] {
+.landingMainContainer > div:nth-child(1) div[role='button'] {
   background: #D97500;
   width: fit-content;
   padding: 1rem;
@@ -48,49 +47,70 @@
   margin-top: 1.9rem;
 }
 
-.landingMainContainer>div:nth-child(1) div[role='button'] a {
+.landingMainContainer > div:nth-child(1) div[role='button'] a {
   text-decoration: none;
   color: white;
   font-size: 1.7rem;
 }
 
-.landingMainContainer>div:nth-child(2) img {
-  height: 70vh;
-  width: auto;
-}
-
-.navBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-inline: 20px;
-  text-align: center;
-
-}
-.meetContainer {
-  display: flex;
-  padding-inline: 20px;
-  height: 80vh;
-  gap: 10vw;
-  justify-content: center;
-}
-
-
-
-.leftPanel {
-  height: 100%;
-  display: flex;
-  align-items: center;
-
-}
-
-.rightPanel {
-  display: flex;
-  align-items: center;
-}
-
-.rightPanel > img {
-  width: 30vw;
+/* Image Responsiveness */
+.landingMainContainer > div:nth-child(2) img {
+  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 20px;
+  object-fit: contain;
+}
+
+/* Navbar Responsive */
+@media (max-width: 768px) {
+  .landingPageContainer nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .landingPageContainer nav .navlist {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .landingMainContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 1.5rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    max-width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] a {
+    font-size: 1.2rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+  .landingPageContainer nav h2 {
+    font-size: 1.4rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) h1 {
+    font-size: 1.3rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] {
+    padding: 0.7rem;
+  }
 }
